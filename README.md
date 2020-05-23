@@ -2,27 +2,43 @@
 Simple Sundanese to Bahasa Indonesia translator using Pattern Matching
 
 ## Latar Belakang
-Pada suatu hari, ada mahasiswa bernama Riyugan yang baru pindah ke Bandung. Pada awalnya dia mengalami kesulitan untuk bersosialisai dengan lingkungan sekitar karena orang-orang di lingkungannya yang baru hanya berbicara dalam bahasa Sunda. Beruntungnya Riyugan punya teman dari kampung halamannya, yaitu Anda, untuk diminta membuat penerjemah sederhana dari Bahasa Sunda ke Bahasa Indonesia begitu pula sebaliknya untuk memudahkan dirinya bersosialisasi dengan lingkungan barunya di Bandung.
+Pada suatu hari, ada mahasiswa bernama Ilham yang baru pindah ke Bandung. Pada awalnya dia mengalami kesulitan untuk bersosialisai dengan lingkungan sekitar karena orang-orang di lingkungannya yang baru hanya berbicara dalam bahasa Sunda. Beruntungnya Ilham punya teman dari kampung halamannya, yaitu Anda, untuk diminta membuat penerjemah sederhana dari Bahasa Sunda ke Bahasa Indonesia begitu pula sebaliknya untuk memudahkan dirinya bersosialisasi dengan lingkungan barunya di Bandung.
 
-## Spesifikasi
-Buatlah dalam bahasa pemrograman Python, program penerjemah sederhana yang memanfaatkan algoritma String Matching (Knuth-Morris-Pratt(KMP), Boyer-Moore(BM), dan Regex), dengan spesifikasi sebagai berikut.
-1. Program mampu membaca kata atau kalimat yang akan diterjemahkan.
-2. Program akan membaca file eksternal yang berisi vocabulary Bahasa Sunda - Bahasa Indonesia (file sudah disiapkan dalam repository).
-3. Program akan melakukan penerjemahan secara perkata (untuk contoh akan ditampilkan di bawah).
-4. Program dapat memilih mau "Bahasa Sunda ke Bahasa Indonesia" atau "Bahasa Indonesia ke Bahasa Sunda".
-5. Pada saat penerjemahan "Bahasa Sunda ke Bahasa Indonesia", program mampu mengenali kata yang tidak memiliki arti (stopwords), seperti "teh" sehingga dapat diabaikan saat penerjemahan.
-6. Pada saat penerjemahan "Bahasa Indonesia ke Bahasa Sunda", program mampu menambahkan kata untuk penekanan kalimat, seperti "teh".
-7. Program dapat menampilkan hasil terjemahan.
-8. Program dibuat secara individu.
-9. Peserta akan mendapatkan nilai bonus jika mengimplementasikan dalam web (untuk bahasanya dibebaskan).
-10. Dilarang meng-copy source code program yang sudah jadi, untuk source code algoritma string matching dipersilahkan menggunakan source code dari tugas yang sudah pernah dibuat (Tugas Kecil 4).
-11. Batas pengerjaannya adalah 6 Juni 2020.
+## Prerequisite
+Make sure you have installed:
+1. [node js](https://nodejs.org/en/)
+2. [npm](https://www.npmjs.com/get-npm)
+3. [flask](https://pypi.org/project/Flask/)
 
-## Contoh Kasus Uji
+## Dependency
+Client dependency in `app/package.json`
+<br>
+Server dependency `flask` and `flask_cors`
+
+## How To Use
+In this directory (root), run:
+1. Client:
+```
+npm run client
+```
+2. Server:
+```
+npm run server
+```
+Alternative:
+```
+$ cd server
+$ virtualenv flask
+$ flask/bin/pip install flask flask_cors
+$ chmod a+x server.py
+$ ./server.py
+```
+
+## Test Case
 ```
 Sunda - Indonesia
-Sunda : nami abdi Riyugan
-Indonesia : nama saya Riyugan
+Sunda : nami abdi Ilham
+Indonesia : nama saya Ilham
 ```
 
 ```
@@ -39,8 +55,8 @@ Indonesia : kamu tiba dari mana?
 
 ```
 Indonesia - Sunda
-Indonesia : nama saya Riyugan
-Sunda : nami abdi Riyugan
+Indonesia : nama saya Ilham
+Sunda : nami abdi Ilham
 ```
 
 ```
@@ -55,8 +71,9 @@ Indonesia : saya tidak bisa bahasa Sunda
 Sunda : abdi henteu tiasa bahasa Sunda
 ```
 
-## Pengumpulan
-1. Lakukan merge request dari hasil fork kalian ke repository ini
-2. Untuk demonya, silahkan membuat video demo penggunaan programnya, diupload ke YouTube dan sertakan linknya pada Readme.
+## Video
+[Youtube Link](https://youtu.be/i7GNqEHPvXI)
 
-### **_(Ubah file README ini pada repository hasil fork kalian)_**
+## Note
+1. This program work fluenty and tested in Mac OS. It should be well in Windows and Linux.
+2. Not all text can be translated.
