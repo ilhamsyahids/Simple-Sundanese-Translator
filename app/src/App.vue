@@ -1,12 +1,16 @@
 <template>
   <div id="app">
+    <Translate msg="Sundanese Translator"/>
   </div>
 </template>
 
 <script>
+import Translate from './components/Translate.vue'
+
 export default {
   name: 'App',
   components: {
+    Translate
   }
 }
 </script>
