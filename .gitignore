@@ -21,3 +21,8 @@ yarn-error.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Custom
+__pycache__
+flask/
+builds/
